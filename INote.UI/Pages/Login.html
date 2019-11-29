@@ -4,27 +4,34 @@
         <div class="card">
             <div class="card-body">
                 <!-- Default form login -->
-                <form name="frmkLogin" class="text-center border border-light p-5" action="#!" ng-submit="login($event)">
+                <form name="frmLogin" class="text-center border border-light p-5" action="#!" ng-submit="login($event)">
 
                     <p class="h4 mb-4">Giriş Yap</p>
 
+                    <div class="alert alert-danger text-left" ng-show="hasErrors()">
+                        {{error}}
+                    </div>
+                    <div class="alert alert-success text-left" ng-show="successMessage">
+                        {{successMessage}}
+                    </div>
                     <!-- Email -->
-                    <input ng-model="user.username" type="email" id="Email" name="Email" class="form-control mb-4" placeholder="E-mail">
+                    <input ng-model="user.username" type="email" id="email" name="email" class="form-control mb-4" placeholder="E-Posta">
 
                     <!-- Password -->
-                    <input ng-model="user.password" type="password" id="Password" name="Password" class="form-control mb-4" placeholder="Şifre">
+                    <input ng-model="user.password" type="password" id="password" name="password" class="form-control mb-4" placeholder="Parola">
 
                     <div class="d-flex justify-content-around">
                         <div>
                             <!-- Remember me -->
                             <div class="custom-control custom-checkbox">
                                 <input ng-model="isRememberMe" type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
-                                <label class="custom-control-label" for="defaultLoginFormRemember">Beni Hatırla</label>
+                                <label class="custom-control-label" for="defaultLoginFormRemember">Beni hatırla</label>
                             </div>
                         </div>
+
                         <div>
                             <!-- Forgot password -->
-                            <a href="">Şifremi Hatırlamıyorum</a>
+                            <a href="">Parolanı mı unuttun?</a>
                         </div>
                     </div>
 
@@ -33,7 +40,7 @@
 
                     <!-- Register -->
                     <p>
-                        Kayıtlı değil misin ?
+                        Henüz üye değil misin?
                         <a href="">Kayıt Ol</a>
                     </p>
 
@@ -46,4 +53,3 @@
 
 
 
-{{user}} {{isRememberMe}}

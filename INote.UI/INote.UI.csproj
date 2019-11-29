@@ -91,9 +91,9 @@
     <Content Include="Content\v4-shims.min.css" />
     <Content Include="index.html" />
     <Content Include="index.js" />
-    <Content Include="Pages\Login.html" />
-    <Content Include="Pages\Register.html" />
-    <Content Include="Pages\Main.html" />
+    <Content Include="Pages\login.html" />
+    <Content Include="Pages\register.html" />
+    <Content Include="Pages\main.html" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
